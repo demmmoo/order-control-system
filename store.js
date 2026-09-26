@@ -3,6 +3,7 @@
   'use strict';
 
   var STORAGE_KEY = 'order_control_v1';
+  var SEED_VERSION = 2; // увеличивайте при изменении seed(), чтобы устройства с уже сохранёнными демо-данными подхватили обновление
   var C = global.Calendar;
 
   var state = null;
@@ -233,6 +234,7 @@
     });
 
     return {
+      seedVersion: SEED_VERSION,
       employees: employees,
       orders: orders,
       seqMap: seqMap,
@@ -248,7 +250,7 @@
       var raw = localStorage.getItem(STORAGE_KEY);
       if (raw) {
         state = JSON.parse(raw);
-        return state;
+        if (state && state.seedVersion === SEED_VERSION) return state;
       }
     } catch (e) { /* ignore parse errors, reseed */ }
     state = seed();
