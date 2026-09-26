@@ -26,12 +26,12 @@
   // ---------- Seed data ----------
   function seed() {
     var employees = [
-      { id: 'e1', name: 'Абенова Сауле Нурлановна', position: 'Начальник отдела', roles: ['руководитель'], email: 'abenova@dept.kz' },
-      { id: 'e2', name: 'Нурланова Гульмира', position: 'Делопроизводитель', roles: ['контролёр'], email: 'nurlanova@dept.kz' },
-      { id: 'e3', name: 'Иванов Алексей', position: 'Ведущий специалист', roles: ['исполнитель'], email: 'ivanov@dept.kz' },
-      { id: 'e4', name: 'Петрова Наталья', position: 'Главный специалист', roles: ['исполнитель'], email: 'petrova@dept.kz' },
-      { id: 'e5', name: 'Сатыбалдиев Ерлан', position: 'Специалист', roles: ['исполнитель'], email: 'satybaldiev@dept.kz' },
-      { id: 'e6', name: 'Ким Ольга', position: 'Заместитель начальника отдела', roles: ['контролёр', 'исполнитель'], email: 'kim@dept.kz' }
+      { id: 'e1', name: 'Ургеншбаев Максат', position: 'Начальник отдела', roles: ['руководитель'], email: 'urgenshbaev@dept.kz' },
+      { id: 'e2', name: 'Хаджиметов Зохиджан', position: 'Делопроизводитель', roles: ['контролёр'], email: 'hadzhimetov@dept.kz' },
+      { id: 'e3', name: 'Атамбай Ерлан', position: 'Ведущий специалист', roles: ['исполнитель'], email: 'atambay@dept.kz' },
+      { id: 'e4', name: 'Абдухожаев Талгатбек', position: 'Главный специалист', roles: ['исполнитель'], email: 'abduhozhaev@dept.kz' },
+      { id: 'e5', name: 'Сарыбай Серик', position: 'Специалист', roles: ['исполнитель'], email: 'sarybay@dept.kz' },
+      { id: 'e6', name: 'Жомарт Ануар', position: 'Заместитель начальника отдела', roles: ['контролёр', 'исполнитель'], email: 'zhomart@dept.kz' }
     ];
 
     var seqMap = { 2026: 0 };
@@ -48,12 +48,12 @@
       summary: 'Годовой отчёт по инвентаризации', executorId: 'e3', coExecutorIds: [],
       orderDate: '2026-09-01', dueDate: '2026-09-18', priority: 'высокий', recurrence: 'разовое',
       resultRequirements: 'Отчёт в формате Excel с подписью главного специалиста',
-      attachments: [{ name: 'приказ_4-12.pdf', addedBy: 'Нурланова Гульмира', date: '2026-09-01' }],
-      progressLog: mkProgress([{ date: '2026-09-05', author: 'Иванов Алексей', text: 'Запрошены данные у бухгалтерии.' }]),
-      history: mkHistory([{ date: '2026-09-01', author: 'Нурланова Гульмира', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
+      attachments: [{ name: 'приказ_4-12.pdf', addedBy: 'Хаджиметов Зохиджан', date: '2026-09-01' }],
+      progressLog: mkProgress([{ date: '2026-09-05', author: 'Атамбай Ерлан', text: 'Запрошены данные у бухгалтерии.' }]),
+      history: mkHistory([{ date: '2026-09-01', author: 'Хаджиметов Зохиджан', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
       status: 'В работе', acceptedDate: null, submittedDates: [], qualityScore: null, managerComment: '',
       returnsCount: 0, onTimeFlag: null, escalated: false, extensionRequests: [], removalReason: null,
-      recurringParentId: null, registeredBy: 'Нурланова Гульмира', registeredDate: '2026-09-01'
+      recurringParentId: null, registeredBy: 'Хаджиметов Зохиджан', registeredDate: '2026-09-01'
     });
 
     orders.push({
@@ -62,15 +62,15 @@
       summary: 'Свод предложений по оптимизации процессов', executorId: 'e4', coExecutorIds: ['e5'],
       orderDate: '2026-09-15', dueDate: '2026-09-25', priority: 'срочный', recurrence: 'разовое',
       resultRequirements: 'Письмо-ответ за подписью руководителя',
-      attachments: [{ name: 'запрос_акимата.pdf', addedBy: 'Нурланова Гульмира', date: '2026-09-15' }],
+      attachments: [{ name: 'запрос_акимата.pdf', addedBy: 'Хаджиметов Зохиджан', date: '2026-09-15' }],
       progressLog: mkProgress([
-        { date: '2026-09-20', author: 'Петрова Наталья', text: 'Проект свода согласован с ПТО.' },
-        { date: '2026-09-25', author: 'Петрова Наталья', text: 'Результат передан на проверку.' }
+        { date: '2026-09-20', author: 'Абдухожаев Талгатбек', text: 'Проект свода согласован с ПТО.' },
+        { date: '2026-09-25', author: 'Абдухожаев Талгатбек', text: 'Результат передан на проверку.' }
       ]),
-      history: mkHistory([{ date: '2026-09-15', author: 'Нурланова Гульмира', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
+      history: mkHistory([{ date: '2026-09-15', author: 'Хаджиметов Зохиджан', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
       status: 'На проверке', acceptedDate: null, submittedDates: ['2026-09-25'], qualityScore: null, managerComment: '',
       returnsCount: 0, onTimeFlag: null, escalated: false, extensionRequests: [], removalReason: null,
-      recurringParentId: null, registeredBy: 'Нурланова Гульмира', registeredDate: '2026-09-15'
+      recurringParentId: null, registeredBy: 'Хаджиметов Зохиджан', registeredDate: '2026-09-15'
     });
 
     orders.push({
@@ -80,11 +80,11 @@
       orderDate: '2026-09-20', dueDate: '2026-09-26', priority: 'обычный', recurrence: 'разовое',
       resultRequirements: 'Справка в свободной форме, до 2 страниц',
       attachments: [],
-      progressLog: mkProgress([{ date: '2026-09-22', author: 'Сатыбалдиев Ерлан', text: 'Данные собираются по подразделениям.' }]),
-      history: mkHistory([{ date: '2026-09-20', author: 'Абенова Сауле Нурлановна', action: 'Регистрация', detail: 'Устное указание зарегистрировано' }]),
+      progressLog: mkProgress([{ date: '2026-09-22', author: 'Сарыбай Серик', text: 'Данные собираются по подразделениям.' }]),
+      history: mkHistory([{ date: '2026-09-20', author: 'Ургеншбаев Максат', action: 'Регистрация', detail: 'Устное указание зарегистрировано' }]),
       status: 'В работе', acceptedDate: null, submittedDates: [], qualityScore: null, managerComment: '',
       returnsCount: 0, onTimeFlag: null, escalated: false, extensionRequests: [], removalReason: null,
-      recurringParentId: null, registeredBy: 'Абенова Сауле Нурлановна', registeredDate: '2026-09-20'
+      recurringParentId: null, registeredBy: 'Ургеншбаев Максат', registeredDate: '2026-09-20'
     });
 
     orders.push({
@@ -94,12 +94,12 @@
       orderDate: '2026-09-18', dueDate: '2026-09-29', priority: 'высокий', recurrence: 'разовое',
       resultRequirements: 'Служебная записка с перечнем мероприятий',
       attachments: [],
-      progressLog: mkProgress([{ date: '2026-09-19', author: 'Ким Ольга', text: 'Собраны предложения от секторов.' }]),
-      history: mkHistory([{ date: '2026-09-18', author: 'Нурланова Гульмира', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
+      progressLog: mkProgress([{ date: '2026-09-19', author: 'Жомарт Ануар', text: 'Собраны предложения от секторов.' }]),
+      history: mkHistory([{ date: '2026-09-18', author: 'Хаджиметов Зохиджан', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
       status: 'В работе', acceptedDate: null, submittedDates: [], qualityScore: null, managerComment: '',
       returnsCount: 0, onTimeFlag: null, escalated: false,
-      extensionRequests: [{ id: uid('ext'), requestedBy: 'Ким Ольга', requestedDate: '2026-09-24', newDate: '2026-10-06', reason: 'Требуется дополнительное согласование с смежным отделом.', status: 'ожидает', decidedBy: null, decidedDate: null }],
-      removalReason: null, recurringParentId: null, registeredBy: 'Нурланова Гульмира', registeredDate: '2026-09-18'
+      extensionRequests: [{ id: uid('ext'), requestedBy: 'Жомарт Ануар', requestedDate: '2026-09-24', newDate: '2026-10-06', reason: 'Требуется дополнительное согласование с смежным отделом.', status: 'ожидает', decidedBy: null, decidedDate: null }],
+      removalReason: null, recurringParentId: null, registeredBy: 'Хаджиметов Зохиджан', registeredDate: '2026-09-18'
     });
 
     orders.push({
@@ -108,10 +108,10 @@
       executorId: 'e3', coExecutorIds: [], orderDate: '2026-09-21', dueDate: '2026-10-01', priority: 'обычный', recurrence: 'разовое',
       resultRequirements: 'Письмо-ответ с приложением таблиц', attachments: [],
       progressLog: mkProgress([]),
-      history: mkHistory([{ date: '2026-09-21', author: 'Нурланова Гульмира', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
+      history: mkHistory([{ date: '2026-09-21', author: 'Хаджиметов Зохиджан', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
       status: 'Новое', acceptedDate: null, submittedDates: [], qualityScore: null, managerComment: '',
       returnsCount: 0, onTimeFlag: null, escalated: false, extensionRequests: [], removalReason: null,
-      recurringParentId: null, registeredBy: 'Нурланова Гульмира', registeredDate: '2026-09-21'
+      recurringParentId: null, registeredBy: 'Хаджиметов Зохиджан', registeredDate: '2026-09-21'
     });
 
     orders.push({
@@ -120,10 +120,10 @@
       executorId: 'e4', coExecutorIds: [], orderDate: '2026-09-10', dueDate: '2026-10-15', priority: 'обычный', recurrence: 'разовое',
       resultRequirements: 'Проект регламента, версия для согласования', attachments: [],
       progressLog: mkProgress([]),
-      history: mkHistory([{ date: '2026-09-10', author: 'Нурланова Гульмира', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
+      history: mkHistory([{ date: '2026-09-10', author: 'Хаджиметов Зохиджан', action: 'Регистрация', detail: 'Поручение зарегистрировано' }]),
       status: 'В работе', acceptedDate: null, submittedDates: [], qualityScore: null, managerComment: '',
       returnsCount: 0, onTimeFlag: null, escalated: false, extensionRequests: [], removalReason: null,
-      recurringParentId: null, registeredBy: 'Нурланова Гульмира', registeredDate: '2026-09-10'
+      recurringParentId: null, registeredBy: 'Хаджиметов Зохиджан', registeredDate: '2026-09-10'
     });
 
     orders.push({
@@ -131,18 +131,18 @@
       correspondent: 'Аппарат акима области', resolution: 'Подготовить аналитическую записку по обращениям за август.', summary: 'Аналитическая записка по обращениям за август',
       executorId: 'e3', coExecutorIds: [], orderDate: '2026-08-21', dueDate: '2026-09-04', priority: 'высокий', recurrence: 'разовое',
       resultRequirements: 'Записка с приложением диаграмм', attachments: [
-        { name: 'записка_август.docx', addedBy: 'Иванов Алексей', date: '2026-09-03' }
+        { name: 'записка_август.docx', addedBy: 'Атамбай Ерлан', date: '2026-09-03' }
       ],
       progressLog: mkProgress([
-        { date: '2026-09-03', author: 'Иванов Алексей', text: 'Результат передан на проверку.' }
+        { date: '2026-09-03', author: 'Атамбай Ерлан', text: 'Результат передан на проверку.' }
       ]),
       history: mkHistory([
-        { date: '2026-08-21', author: 'Нурланова Гульмира', action: 'Регистрация', detail: 'Поручение зарегистрировано' },
-        { date: '2026-09-04', author: 'Абенова Сауле Нурлановна', action: 'Приёмка', detail: 'Принято, оценка 5' }
+        { date: '2026-08-21', author: 'Хаджиметов Зохиджан', action: 'Регистрация', detail: 'Поручение зарегистрировано' },
+        { date: '2026-09-04', author: 'Ургеншбаев Максат', action: 'Приёмка', detail: 'Принято, оценка 5' }
       ]),
       status: 'Исполнено', acceptedDate: '2026-09-04', submittedDates: ['2026-09-03'], qualityScore: 5,
       managerComment: 'Отлично, без замечаний.', returnsCount: 0, onTimeFlag: true, escalated: false,
-      extensionRequests: [], removalReason: null, recurringParentId: null, registeredBy: 'Нурланова Гульмира', registeredDate: '2026-08-21'
+      extensionRequests: [], removalReason: null, recurringParentId: null, registeredBy: 'Хаджиметов Зохиджан', registeredDate: '2026-08-21'
     });
 
     orders.push({
@@ -150,21 +150,21 @@
       correspondent: 'Департамент юстиции', resolution: 'Подготовить заключение по проекту нормативного акта.', summary: 'Заключение по проекту НПА',
       executorId: 'e4', coExecutorIds: [], orderDate: '2026-08-06', dueDate: '2026-08-20', priority: 'высокий', recurrence: 'разовое',
       resultRequirements: 'Заключение с визой юр. отдела', attachments: [
-        { name: 'заключение_финал.pdf', addedBy: 'Петрова Наталья', date: '2026-08-25' }
+        { name: 'заключение_финал.pdf', addedBy: 'Абдухожаев Талгатбек', date: '2026-08-25' }
       ],
       progressLog: mkProgress([
-        { date: '2026-08-19', author: 'Петрова Наталья', text: 'Первый вариант передан на проверку.' },
-        { date: '2026-08-22', author: 'Абенова Сауле Нурлановна', text: 'Возврат на доработку: требуется уточнить основания.' },
-        { date: '2026-08-25', author: 'Петрова Наталья', text: 'Доработано и повторно передано на проверку.' }
+        { date: '2026-08-19', author: 'Абдухожаев Талгатбек', text: 'Первый вариант передан на проверку.' },
+        { date: '2026-08-22', author: 'Ургеншбаев Максат', text: 'Возврат на доработку: требуется уточнить основания.' },
+        { date: '2026-08-25', author: 'Абдухожаев Талгатбек', text: 'Доработано и повторно передано на проверку.' }
       ]),
       history: mkHistory([
-        { date: '2026-08-06', author: 'Нурланова Гульмира', action: 'Регистрация', detail: 'Поручение зарегистрировано' },
-        { date: '2026-08-22', author: 'Абенова Сауле Нурлановна', action: 'Возврат на доработку', detail: 'Оценка 2, требуется уточнить основания' },
-        { date: '2026-08-25', author: 'Абенова Сауле Нурлановна', action: 'Приёмка', detail: 'Принято, оценка 3' }
+        { date: '2026-08-06', author: 'Хаджиметов Зохиджан', action: 'Регистрация', detail: 'Поручение зарегистрировано' },
+        { date: '2026-08-22', author: 'Ургеншбаев Максат', action: 'Возврат на доработку', detail: 'Оценка 2, требуется уточнить основания' },
+        { date: '2026-08-25', author: 'Ургеншбаев Максат', action: 'Приёмка', detail: 'Принято, оценка 3' }
       ]),
       status: 'Исполнено', acceptedDate: '2026-08-25', submittedDates: ['2026-08-19', '2026-08-25'], qualityScore: 3,
       managerComment: 'Приняты с учётом исправлений, но со значительным опозданием и после доработки.', returnsCount: 1, onTimeFlag: false, escalated: false,
-      extensionRequests: [], removalReason: null, recurringParentId: null, registeredBy: 'Нурланова Гульмира', registeredDate: '2026-08-06'
+      extensionRequests: [], removalReason: null, recurringParentId: null, registeredBy: 'Хаджиметов Зохиджан', registeredDate: '2026-08-06'
     });
 
     orders.push({
@@ -173,16 +173,16 @@
       executorId: 'e5', coExecutorIds: [], orderDate: '2026-09-02', dueDate: '2026-09-16', priority: 'обычный', recurrence: 'разовое',
       resultRequirements: 'Проект приказа с листом согласования', attachments: [],
       progressLog: mkProgress([
-        { date: '2026-09-15', author: 'Сатыбалдиев Ерлан', text: 'Первый вариант передан на проверку.' },
-        { date: '2026-09-17', author: 'Абенова Сауле Нурлановна', text: 'Возврат: не учтены показатели KPI сотрудников.' }
+        { date: '2026-09-15', author: 'Сарыбай Серик', text: 'Первый вариант передан на проверку.' },
+        { date: '2026-09-17', author: 'Ургеншбаев Максат', text: 'Возврат: не учтены показатели KPI сотрудников.' }
       ]),
       history: mkHistory([
-        { date: '2026-09-02', author: 'Нурланова Гульмира', action: 'Регистрация', detail: 'Поручение зарегистрировано' },
-        { date: '2026-09-17', author: 'Абенова Сауле Нурлановна', action: 'Возврат на доработку', detail: 'Оценка 2, не учтены показатели KPI' }
+        { date: '2026-09-02', author: 'Хаджиметов Зохиджан', action: 'Регистрация', detail: 'Поручение зарегистрировано' },
+        { date: '2026-09-17', author: 'Ургеншбаев Максат', action: 'Возврат на доработку', detail: 'Оценка 2, не учтены показатели KPI' }
       ]),
       status: 'На доработке', acceptedDate: null, submittedDates: ['2026-09-15'], qualityScore: null, managerComment: 'Не учтены показатели KPI сотрудников, требуется пересмотреть проект.',
       returnsCount: 1, onTimeFlag: null, escalated: false, extensionRequests: [], removalReason: null,
-      recurringParentId: null, registeredBy: 'Нурланова Гульмира', registeredDate: '2026-09-02'
+      recurringParentId: null, registeredBy: 'Хаджиметов Зохиджан', registeredDate: '2026-09-02'
     });
 
     orders.push({
@@ -190,15 +190,15 @@
       correspondent: 'Общественный совет', resolution: 'Организовать встречу с общественным советом по вопросам ЖКХ.', summary: 'Встреча с общественным советом по ЖКХ',
       executorId: 'e6', coExecutorIds: [], orderDate: '2026-07-16', dueDate: '2026-08-05', priority: 'обычный', recurrence: 'разовое',
       resultRequirements: 'Протокол встречи', attachments: [],
-      progressLog: mkProgress([{ date: '2026-07-20', author: 'Ким Ольга', text: 'Вопрос утратил актуальность в связи с переносом на следующий год.' }]),
+      progressLog: mkProgress([{ date: '2026-07-20', author: 'Жомарт Ануар', text: 'Вопрос утратил актуальность в связи с переносом на следующий год.' }]),
       history: mkHistory([
-        { date: '2026-07-16', author: 'Нурланова Гульмира', action: 'Регистрация', detail: 'Поручение зарегистрировано' },
-        { date: '2026-07-21', author: 'Абенова Сауле Нурлановна', action: 'Снято с контроля', detail: 'Основание: вопрос перенесён на 2027 год решением акима области' }
+        { date: '2026-07-16', author: 'Хаджиметов Зохиджан', action: 'Регистрация', detail: 'Поручение зарегистрировано' },
+        { date: '2026-07-21', author: 'Ургеншбаев Максат', action: 'Снято с контроля', detail: 'Основание: вопрос перенесён на 2027 год решением акима области' }
       ]),
       status: 'Снято с контроля', acceptedDate: null, submittedDates: [], qualityScore: null, managerComment: '',
       returnsCount: 0, onTimeFlag: null, escalated: false, extensionRequests: [],
       removalReason: 'Вопрос перенесён на 2027 год решением акима области', recurringParentId: null,
-      registeredBy: 'Нурланова Гульмира', registeredDate: '2026-07-16'
+      registeredBy: 'Хаджиметов Зохиджан', registeredDate: '2026-07-16'
     });
 
     // Периодическое поручение — уже исполнен один экземпляр, второй создан автоматически.
@@ -208,17 +208,17 @@
       correspondent: 'Внутренний приказ', resolution: 'Готовить ежемесячный свод исполнительской дисциплины отдела.', summary: 'Ежемесячный свод исполнительской дисциплины',
       executorId: 'e6', coExecutorIds: [], orderDate: '2026-08-01', dueDate: '2026-08-31', priority: 'обычный', recurrence: 'ежемесячное',
       resultRequirements: 'Свод в формате Excel/PDF', attachments: [
-        { name: 'свод_август.xlsx', addedBy: 'Ким Ольга', date: '2026-08-29' }
+        { name: 'свод_август.xlsx', addedBy: 'Жомарт Ануар', date: '2026-08-29' }
       ],
-      progressLog: mkProgress([{ date: '2026-08-29', author: 'Ким Ольга', text: 'Свод подготовлен и передан на проверку.' }]),
+      progressLog: mkProgress([{ date: '2026-08-29', author: 'Жомарт Ануар', text: 'Свод подготовлен и передан на проверку.' }]),
       history: mkHistory([
-        { date: '2026-08-01', author: 'Абенова Сауле Нурлановна', action: 'Регистрация', detail: 'Периодическое поручение зарегистрировано' },
-        { date: '2026-08-30', author: 'Абенова Сауле Нурлановна', action: 'Приёмка', detail: 'Принято, оценка 4' },
+        { date: '2026-08-01', author: 'Ургеншбаев Максат', action: 'Регистрация', detail: 'Периодическое поручение зарегистрировано' },
+        { date: '2026-08-30', author: 'Ургеншбаев Максат', action: 'Приёмка', detail: 'Принято, оценка 4' },
         { date: '2026-08-30', author: 'Система', action: 'Автосоздание', detail: 'Создан следующий экземпляр периодического поручения' }
       ]),
       status: 'Исполнено', acceptedDate: '2026-08-30', submittedDates: ['2026-08-29'], qualityScore: 4,
       managerComment: 'Небольшие правки по оформлению.', returnsCount: 0, onTimeFlag: true, escalated: false,
-      extensionRequests: [], removalReason: null, recurringParentId: null, registeredBy: 'Абенова Сауле Нурлановна', registeredDate: '2026-08-01'
+      extensionRequests: [], removalReason: null, recurringParentId: null, registeredBy: 'Ургеншбаев Максат', registeredDate: '2026-08-01'
     });
     orders.push({
       id: uid('ord'), regNumber: reg(), basisType: 'приказ', docNumberDate: '№ 4-1 от 15.06.2026',
